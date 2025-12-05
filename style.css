@@ -204,7 +204,6 @@ body.fade-out {
     animation: warpFlash 0.7s ease forwards;
 }
 
-/* Líneas de luz roja suave */
 #warp-transition::before {
     content: "";
     width: 2px;
@@ -250,16 +249,22 @@ body.fade-out {
         margin-bottom: 20px;
     }
 
+    /* BOTONES RESPONSIVOS */
     .cta-buttons {
         flex-direction: column;
         gap: 15px;
+        align-items: center;
+        margin-top: 30px;
     }
 
-    .btn-3d {
-        width: 100%;
+    .btn-3d, .btn-3d.alt {
+        width: 90%;              /* ocupan casi todo el ancho en móviles */
+        font-size: 18px;
         text-align: center;
+        padding: 12px 0;
     }
 
+    /* IMÁGENES RESPONSIVAS */
     .images {
         flex-direction: column;
         gap: 15px;
