@@ -1,0 +1,240 @@
+/* -------------------- ESTILOS GENERALES -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #0a0220, #001f4d);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* -------------------- BARRA SUPERIOR -------------------- */
+header {
+    background: rgba(10, 0, 20, 0.9);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff0080, #ff8c00);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* -------------------- SECCIÓN PRINCIPAL (HERO) -------------------- */
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    min-height: 80vh;
+}
+
+/* Texto principal */
+.hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.neon {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* -------------------- BOTONES 3D -------------------- */
+.cta-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn-3d {
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #ff00a6, #ff8c00);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 0 #a4005e;
+    transition: 0.2s;
+}
+
+.btn-3d:hover {
+    transform: translateY(-4px);
+}
+
+.btn-3d:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #a4005e;
+}
+
+.btn-3d.alt {
+    background: linear-gradient(90deg, #00a6ff, #007bff);
+    box-shadow: 0 6px 0 #004c8c;
+}
+
+/* -------------------- PARTÍCULAS DEL FONDO -------------------- */
+canvas#heroCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    background: rgba(0, 0, 30, 0.7);
+    padding: 15px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+nav ul li a.active {
+    background: linear-gradient(45deg, #ff00e1, #ff6a00);
+    box-shadow: 0 0 15px rgba(255,92,0,0.9);
+    transform: scale(1.06);
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* -------------------- SUBTÍTULOS PROFESIONALES -------------------- */
+.hero h3 {
+    font-size: 28px;
+    margin: 30px 0 15px;
+    color: #e0e0e0; /* Gris claro, elegante */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Sutil sombra para destacar */
+    font-weight: 600;
+}
+
+/* -------------------- LISTAS -------------------- */
+.hero ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto 20px;
+    max-width: 600px;
+}
+
+.hero ul li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-left: 4px solid #007bff; /* Azul profesional */
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+/* -------------------- IMÁGENES -------------------- */
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.images img {
+    border: 1px solid #007bff; /* Azul profesional */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.images img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+/* -------------------- PÁRRAFOS -------------------- */
+.hero p {
+    font-size: 20px;
+    max-width: 750px;
+    margin: 15px auto;
+    opacity: 0.9;
+    line-height: 1.6;
+    color: #f0f0f0; /* Texto claro sobre fondo oscuro */
+}
+
+/* Contenedor horizontal para información */
+.info-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+    margin-bottom: 30px;
+}
+
+/* Columnas izquierda y derecha */
+.info-sections .left,
+.info-sections .right {
+    flex: 1; /* Ocupa el mismo ancho */
+    min-width: 280px; /* Evita que se reduzca demasiado en móviles */
+}
+
+/* Mantener estilo de subtítulos y listas */
+.info-sections h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    font-weight: 600;
+}
+
+.info-sections ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-sections ul li {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-left: 4px solid #007bff;
+    border-radius: 6px;
+    font-size: 18px;
+}

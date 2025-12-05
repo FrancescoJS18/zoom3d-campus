@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemática - Zoom 3D</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Zoom 3D - Campus Vallejo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="titulo.html">Título</a></li>
+                <li><a href="problematica.html" class="active">Problemática</a></li>
+                <li><a href="objetivos.html">Objetivos</a></li>
+                <li><a href="prototipo.html">Prototipo</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2 class="neon">Problemática</h2>
+
+        <div class="info-sections">
+            <div class="left">
+                <h3>Problema principal</h3>
+                <p>
+                    Los sistemas actuales de navegación universitaria utilizan menús planos y poco intuitivos. 
+                    Esto dificulta la orientación de los estudiantes y genera confusión al intentar ubicar aulas, 
+                    laboratorios y áreas de estudio.
+                </p>
+            </div>
+
+            <div class="right">
+                <h3>Consecuencias</h3>
+                <ul>
+                    <li><strong>Desmotivación:</strong> los estudiantes se sienten perdidos y menos interesados en explorar el campus.</li>
+                    <li><strong>Limitación visual:</strong> no pueden conocer las instalaciones de manera dinámica ni interactiva.</li>
+                    <li><strong>Problemas de integración:</strong> los nuevos alumnos tardan más en adaptarse al campus físico.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="images">
+            <img src="img/menuzoom.png" alt="Menú tradicional de navegación" style="width:48%; margin-right:2%;">
+            <img src="img/dificultadorientacion.jpg" alt="Dificultad de orientación" style="width:48%;">
+        </div>
+
+        <canvas id="heroCanvas"></canvas>
+    </section>
+
+    <footer>Proyecto Zoom 3D – Franchesco © 2025</footer>
+    <div id="warp-transition"></div>
+</body>
+</html>
+
