@@ -28,18 +28,39 @@
         <p>Una experiencia inmersiva donde navegarás entre salas virtuales, reemplazando los menús planos por interacción 3D dentro del campus de la Universidad César Vallejo.</p>
 
         <div class="cta-buttons">
-            <a href="titulo.html" class="btn-3d">Ver Título</a>
-            <a href="problematica.html" class="btn-3d alt">Ver Problemática</a>
-            <a href="objetivos.html" class="btn-3d">Ver Objetivos</a>
-            <a href="prototipo.html" class="btn-3d alt">Ver Prototipo 3D</a>
-            <a href="resultados.html" class="btn-3d">Ver Resultados</a>
+            <a href="titulo.html" class="btn-3d warp-btn">Ver Título</a>
+            <a href="problematica.html" class="btn-3d alt warp-btn">Ver Problemática</a>
+            <a href="objetivos.html" class="btn-3d warp-btn">Ver Objetivos</a>
+            <a href="prototipo.html" class="btn-3d alt warp-btn">Ver Prototipo 3D</a>
+            <a href="resultados.html" class="btn-3d warp-btn">Ver Resultados</a>
         </div>
 
         <canvas id="heroCanvas"></canvas>
     </section>
 
     <footer>Proyecto Zoom 3D – Franchesco © 2025</footer>
-    
+
+    <!-- Efecto hiperespacio -->
+    <div id="warp-transition"></div>
+
+    <script>
+        // Selecciona todos los botones que deberían activar la animación
+        const warpButtons = document.querySelectorAll('.warp-btn');
+        const warpTransition = document.getElementById('warp-transition');
+
+        warpButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault(); // evita que la página navegue inmediatamente
+                const href = btn.getAttribute('href');
+
+                warpTransition.classList.add('active');
+
+                // Espera la animación antes de ir a la página
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 700); // 700ms coincide con la animación
+            });
+        });
+    </script>
 </body>
 </html>
-
